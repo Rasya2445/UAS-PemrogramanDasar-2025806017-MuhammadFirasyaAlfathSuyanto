@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Inventory System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <h1>📦 Mini Inventory System</h1>
+    <nav>
+      <button class="tab-btn active" data-tab="barang">Barang</button>
+      <button class="tab-btn" data-tab="kategori">Kategori</button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- ================= TAB BARANG ================= -->
+    <section id="tab-barang" class="tab-content active">
+      <div class="card">
+        <h2 id="form-barang-title">Tambah Barang</h2>
+        <form id="form-barang">
+          <input type="hidden" id="barang-id">
+
+          <div class="form-group">
+            <label for="nama_barang">Nama Barang *</label>
+            <input type="text" id="nama_barang" placeholder="Contoh: Mouse Wireless">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="kategori_id">Kategori</label>
+              <select id="kategori_id"></select>
+            </div>
+            <div class="form-group">
+              <label for="supplier_id">Supplier</label>
+              <select id="supplier_id"></select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="stok">Stok *</label>
+              <input type="number" id="stok" min="0" placeholder="0">
+            </div>
+            <div class="form-group">
+              <label for="harga">Harga (Rp) *</label>
+              <input type="number" id="harga" min="0" placeholder="0">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="deskripsi_barang">Deskripsi</label>
+            <input type="text" id="deskripsi_barang" placeholder="Deskripsi singkat (opsional)">
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="btn-submit-barang">Simpan</button>
+            <button type="button" class="btn btn-secondary" id="btn-cancel-barang">Batal</button>
+          </div>
+        </form>
+        <p id="alert-barang" class="alert"></p>
+      </div>
+
+      <div class="card">
+        <h2>Daftar Barang</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nama Barang</th>
+                <th>Kategori</th>
+                <th>Supplier</th>
+                <th>Stok</th>
+                <th>Harga</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="tabel-barang">
+              <!-- diisi via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB KATEGORI ================= -->
+    <section id="tab-kategori" class="tab-content">
+      <div class="card">
+        <h2 id="form-kategori-title">Tambah Kategori</h2>
+        <form id="form-kategori">
+          <input type="hidden" id="kategori-id">
+          <div class="form-group">
+            <label for="nama_kategori">Nama Kategori *</label>
+            <input type="text" id="nama_kategori" placeholder="Contoh: Elektronik">
+          </div>
+          <div class="form-group">
+            <label for="deskripsi_kategori">Deskripsi</label>
+            <input type="text" id="deskripsi_kategori" placeholder="Deskripsi singkat (opsional)">
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="btn-submit-kategori">Simpan</button>
+            <button type="button" class="btn btn-secondary" id="btn-cancel-kategori">Batal</button>
+          </div>
+        </form>
+        <p id="alert-kategori" class="alert"></p>
+      </div>
+
+      <div class="card">
+        <h2>Daftar Kategori</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nama Kategori</th>
+                <th>Deskripsi</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="tabel-kategori">
+              <!-- diisi via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Capstone Project &mdash; Pemrograman Dasar &copy; 2026</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
