@@ -24,18 +24,18 @@ Aplikasi web sederhana untuk mengelola data **barang, kategori, dan supplier** p
 UAS-PemrogramanDasar-NIM-Nama/
 │
 ├── backend/
-│   ├── app.js                    # entry point server
+│   ├── app.js
 │   ├── package.json
-│   ├── .env.example              # contoh konfigurasi environment
+│   ├── .env.example
 │   ├── config/
-│   │   └── db.js                 # koneksi ke MySQL
+│   │   └── db.js
 │   ├── controllers/
-│   │   ├── barangController.js   # logika request/response barang
-│   │   ├── kategoriController.js # logika request/response kategori
+│   │   ├── barangController.js
+│   │   ├── kategoriController.js
 │   │   └── supplierController.js
 │   ├── models/
-│   │   ├── barangModel.js        # query database barang
-│   │   ├── kategoriModel.js      # query database kategori
+│   │   ├── barangModel.js
+│   │   ├── kategoriModel.js
 │   │   └── supplierModel.js
 │   └── routes/
 │       ├── barangRoutes.js
@@ -49,7 +49,7 @@ UAS-PemrogramanDasar-NIM-Nama/
 │   └── assets/
 │
 ├── database/
-│   └── database.sql              # skema + data contoh (siap import phpMyAdmin)
+│   └── database.sql
 │
 ├── screenshots/
 │   ├── dashboard.png
@@ -81,7 +81,6 @@ UAS-PemrogramanDasar-NIM-Nama/
    cd backend
    cp .env.example .env
    ```
-   Sesuaikan isi `.env` dengan konfigurasi MySQL di komputer Anda (host, user, password).
 
 4. **Install dependency backend**
    ```bash
